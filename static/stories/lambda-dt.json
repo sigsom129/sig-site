@@ -1,0 +1,53 @@
+{
+    "startedAt":"11/05/2024",
+    "completedAt":"",
+    "name":"Add Forms Processor to Dynatrace",
+    "status":"In-Progress",
+    "storyURL": "https://www17.v1host.com/StateFarmVersionOneProd/TeamRoom.mvc/Show/18946320",
+    "description":"Add Forms Processor to Dynatrace",
+    "notes":[],
+    "tasks": [
+        {
+            "startedAt": "11/05/2024",
+            "completedAt": "11/07/2024",
+            "name": "Create Lambda Dt Token",
+            "status": "Done",
+            "description": "Request a New Token for Lambda Functions to send metrics to Dynatrace",
+            "notes": [
+                "Token Request Made: https://sfgitlab.opr.statefarm.org/event-management/observability/dynatrace/dynatrace-support/-/issues/901"
+            ]
+        },
+        {
+            "startedAt": "11/04/2024",
+            "completedAt": "11/07/2024",
+            "name": "Update Dynatrace Vault",
+            "status": "Done",
+            "blockedReason": "Waiting for Token creation, then will update vault",
+            "blockedAt": "11/05/2024",
+            "description": "Update Dt vault with new lambda token for use with dynatrace-lambda.tf",
+            "notes": []
+        },
+        {
+            "startedAt": "11/01/2024",
+            "completedAt": "11/08/2024",
+            "name": "Update Dynatrace-lambda.tf",
+            "status": "Done",
+            "blockedReason": "Waiting for Token creation in vault, then will update",
+            "blockedAt": "11/05/2024",
+            "description": "Create a reusable .tf file for quickly setting up Dynatrace Lambda Layer settings",
+            "notes": [
+                "Token may not have valid claims... need to verify"
+            ]
+        },
+        {
+            "startedAt": "11/08/2024",
+            "completedAt": "",
+            "name": "Validate Dynatrace is receiving Traces, Logs, Metrics",
+            "status": "In-Progress",
+            "description": "Create a reusable .tf file for quickly setting up Dynatrace Lambda Layer settings",
+            "notes": [
+                "Getting 401 unauthorized in Dynatrace One Agent Exporter"
+            ]
+        }
+    ]
+}

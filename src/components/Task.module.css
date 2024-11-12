@@ -1,0 +1,65 @@
+.task {
+  border: 2px solid #ddd;
+  padding: 16px;
+  background: #f9f9f9;
+  max-width: 400px;
+  margin: 16px auto; /* Center the card horizontally */
+  text-align: center; /* Center content inside the card */
+  border-radius: 8px; /* Optional: for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: for subtle shadow */
+}
+
+.task h2 {
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.task input {
+  width: 70%;
+  padding: 2px;
+  margin-right: 8px;
+}
+
+.task button {
+  padding: 1px 12px;
+}
+
+.task ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.task li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task select {
+  margin-left: 8px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.progressBar {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
