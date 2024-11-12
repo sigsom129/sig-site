@@ -94,12 +94,8 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-          {to: '/action_new', label: 'Action & News', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/tasks', label: 'Action & News', position: 'left'},
+
         ],
       },
       footer: {
