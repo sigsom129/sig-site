@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, IconButton, Collapse, TextField } from '@mui/material';
+import { Box, Button, IconButton, Collapse, TextField, Divider } from '@mui/material';
 import { Delete as DeleteIcon, ExpandLess, ExpandMore } from '@mui/icons-material';
 import TaskCard from './TaskCard';
 
@@ -35,16 +35,37 @@ const TaskGroup = ({ groupName, initialTasks, onTasksUpdate, onDeleteGroup, onUp
   const toggleCollapse = () => setCollapsed((prev) => !prev);
 
   return (
-    <Box sx={{ marginBottom: 4, border: '1px solid #ddd', borderRadius: 1, padding: 2 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <Box sx={{ marginBottom: 2, padding: 2, border: 'none' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'relative',
+          marginBottom: 1,
+        }}
+      >
         <TextField
-          variant="outlined"
+          variant="standard"
           value={groupName}
           onChange={(e) => onUpdateGroupName(e.target.value)}
           fullWidth
-          sx={{ fontWeight: 'bold', cursor: 'pointer', marginBottom: 2 }}
+          inputProps={{
+            style: { textAlign: 'center', fontWeight: 'bold', fontSize: '1.25rem' },
+          }}
+          sx={{
+            '& .MuiInput-underline:before': {
+              borderBottom: 'none',
+            },
+            '& .MuiInput-underline:after': {
+              borderBottom: 'none',
+            },
+            '& .MuiInputBase-root': {
+              justifyContent: 'center',
+            },
+          }}
         />
-        <Box>
+        <Box sx={{ position: 'absolute', right: 0 }}>
           <IconButton size="small" onClick={onDeleteGroup} sx={{ marginRight: 1 }}>
             <DeleteIcon fontSize="small" />
           </IconButton>
@@ -53,6 +74,8 @@ const TaskGroup = ({ groupName, initialTasks, onTasksUpdate, onDeleteGroup, onUp
           </IconButton>
         </Box>
       </Box>
+
+      <Divider sx={{ marginBottom: 1, borderBottomWidth: 2 }} />
 
       <Collapse in={!collapsed}>
         {tasks.map((task, index) => (
@@ -63,7 +86,7 @@ const TaskGroup = ({ groupName, initialTasks, onTasksUpdate, onDeleteGroup, onUp
             onDelete={() => handleDeleteTask(index)}
           />
         ))}
-        <Button variant="contained" onClick={handleAddTask} sx={{ marginTop: 2 }}>
+        <Button variant="contained" onClick={handleAddTask} sx={{ marginTop: 1 }}>
           Add Task
         </Button>
       </Collapse>
