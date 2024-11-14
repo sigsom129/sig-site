@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksig_site=self.webpackChunksig_site||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/sig-site/blog","blogTitle":"Blog","authorsListPath":"/sig-site/blog/authors"}')}}]);
